@@ -17,405 +17,322 @@
 
         body {
             font-family: 'Tajawal', sans-serif;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            background: linear-gradient(145deg, #e6f0fa 0%, #b8d1f0 100%);
             min-height: 100vh;
             padding: 20px;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1300px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.97);
-            border-radius: 40px;
+            background: #ffffff;
+            border-radius: 30px;
             padding: 35px;
-            box-shadow: 0 30px 70px rgba(0,0,0,0.4);
-            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 40px rgba(25, 55, 110, 0.15);
         }
 
-        /* Header Section */
+        /* Header Section - أزرق هادئ */
         .header {
             text-align: center;
             margin-bottom: 40px;
-            padding: 35px;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            border-radius: 30px;
+            padding: 30px;
+            background: linear-gradient(135deg, #1a3b5e, #2c5282);
+            border-radius: 25px;
             color: white;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 25px rgba(26, 59, 94, 0.2);
         }
 
         .header h1 {
-            font-size: 3.2em;
-            margin-bottom: 15px;
-            text-shadow: 4px 4px 6px rgba(0,0,0,0.3);
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
         }
 
         .header h1 i {
             color: #ffd700;
-            margin-left: 20px;
-            animation: float 3s ease-in-out infinite;
+            margin-left: 15px;
         }
 
         .header h2 {
-            font-size: 2em;
-            font-weight: 500;
-            color: #e0e0e0;
+            font-size: 1.6em;
+            font-weight: 400;
+            color: #e0f2fe;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-
-        /* Stats Section */
+        /* Stats Section - أزرق فاتح */
         .stats-section {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            gap: 25px;
-            margin-bottom: 45px;
+            gap: 20px;
+            margin-bottom: 35px;
         }
 
         .stat-card {
-            background: linear-gradient(135deg, #ffffff, #f8f9fa);
-            padding: 25px 35px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            background: #f0f7ff;
+            padding: 20px 30px;
+            border-radius: 18px;
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 18px;
             flex: 1;
-            min-width: 220px;
-            border: 2px solid #2c5364;
-            transition: all 0.3s ease;
+            min-width: 200px;
+            border: 1px solid #cddfff;
+            box-shadow: 0 5px 15px rgba(44, 82, 130, 0.08);
+            transition: all 0.2s ease;
         }
 
         .stat-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 20px 40px rgba(44, 83, 100, 0.3);
+            background: #e3f0ff;
+            border-color: #2c5282;
         }
 
         .stat-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #0f2027, #2c5364);
-            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #1a3b5e, #2c5282);
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #ffd700;
-            font-size: 1.8em;
+            color: white;
+            font-size: 1.6em;
         }
 
         .stat-info h3 {
-            color: #0f2027;
-            font-size: 1.2em;
+            color: #1a3b5e;
+            font-size: 1.1em;
             margin-bottom: 5px;
+            font-weight: 500;
         }
 
         .stat-info p {
-            color: #2c5364;
+            color: #2c5282;
             font-size: 1.5em;
-            font-weight: bold;
+            font-weight: 700;
         }
 
-        /* Progress Section */
+        /* Progress Section - أزرق هادئ */
         .progress-section {
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            border-radius: 20px;
+            background: #f0f7ff;
+            border-radius: 18px;
             padding: 25px;
-            margin: 35px 0;
-            border: 2px solid #2c5364;
+            margin: 30px 0;
+            border: 1px solid #cddfff;
         }
 
         .progress-title {
-            color: #0f2027;
-            margin-bottom: 20px;
+            color: #1a3b5e;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
-            gap: 15px;
-            font-size: 1.3em;
+            gap: 10px;
+            font-size: 1.2em;
         }
 
         .progress-bar-container {
             width: 100%;
-            height: 30px;
-            background: #dee2e6;
-            border-radius: 15px;
+            height: 22px;
+            background: #d4e2f2;
+            border-radius: 30px;
             overflow: hidden;
-            box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
         }
 
         .progress-bar {
             height: 100%;
-            background: linear-gradient(90deg, #0f2027, #2c5364, #4a7c8c);
-            border-radius: 15px;
+            background: linear-gradient(90deg, #1a3b5e, #2c5282, #3a6ca8);
+            border-radius: 30px;
             width: 50%;
-            transition: width 1s ease;
-            position: relative;
             color: white;
-            font-size: 1em;
-            line-height: 30px;
+            font-size: 0.85em;
+            line-height: 22px;
             padding-right: 15px;
-            font-weight: bold;
-            text-shadow: 1px 1px 2px black;
+            font-weight: 500;
         }
 
         /* Evaluations Grid */
         .evaluations-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+            margin: 35px 0;
         }
 
         .evaluation-card {
-            background: white;
-            border-radius: 25px;
+            background: #ffffff;
+            border-radius: 20px;
             padding: 25px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            transition: all 0.4s ease;
-            border: 2px solid transparent;
+            box-shadow: 0 8px 20px rgba(26, 59, 94, 0.08);
+            transition: all 0.2s ease;
+            border: 1px solid #e2edff;
             position: relative;
-            overflow: hidden;
         }
 
         .evaluation-card:hover {
-            transform: translateY(-12px) scale(1.02);
-            border-color: #2c5364;
-            box-shadow: 0 30px 50px rgba(44, 83, 100, 0.3);
-        }
-
-        .evaluation-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 8px;
-            background: linear-gradient(90deg, #0f2027, #2c5364, #4a7c8c);
-        }
-
-        /* Lesson Image Styling */
-        .lesson-image {
-            width: 100%;
-            height: 140px;
-            border-radius: 15px;
-            margin-bottom: 15px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            overflow: hidden;
-            border: 3px solid #2c5364;
-            transition: all 0.3s ease;
-        }
-
-        .evaluation-card:hover .lesson-image {
-            transform: scale(1.05);
-            border-color: #ffd700;
-        }
-
-        .lesson-image-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(15,32,39,0.7), rgba(44,83,100,0.7));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-
-        .evaluation-card:hover .lesson-image-overlay {
-            opacity: 1;
-        }
-
-        .lesson-image-overlay i {
-            color: white;
-            font-size: 2.5em;
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(26, 59, 94, 0.12);
+            border-color: #2c5282;
         }
 
         .card-number {
             display: inline-block;
-            background: linear-gradient(135deg, #0f2027, #2c5364);
+            background: #1a3b5e;
             color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            border-radius: 14px;
             text-align: center;
-            line-height: 50px;
-            font-weight: bold;
-            font-size: 1.4em;
+            line-height: 45px;
+            font-weight: 700;
+            font-size: 1.3em;
             margin-bottom: 15px;
-            border: 3px solid #ffd700;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 12px rgba(26, 59, 94, 0.2);
         }
 
         .card-title {
             font-size: 1.5em;
-            color: #0f2027;
-            margin-bottom: 10px;
+            color: #1a3b5e;
+            margin-bottom: 12px;
             font-weight: 700;
+            border-right: 5px solid #2c5282;
+            padding-right: 15px;
         }
 
-        .card-subtitle {
-            color: #495057;
+        .card-description {
+            color: #2c3e50;
             margin-bottom: 20px;
             font-size: 1em;
-            line-height: 1.6;
-            min-height: 60px;
+            line-height: 1.7;
+            padding: 15px;
+            background: #f8faff;
+            border-radius: 15px;
+            min-height: 85px;
         }
 
         .lesson-badge {
-            background: #e9ecef;
-            color: #0f2027;
-            padding: 8px 15px;
+            background: #e3f0ff;
+            color: #1a3b5e;
+            padding: 6px 14px;
             border-radius: 25px;
-            font-size: 0.9em;
+            font-size: 0.85em;
             display: inline-block;
             margin-bottom: 15px;
-            border-right: 4px solid #2c5364;
-            font-weight: 500;
+            border-right: 3px solid #2c5282;
         }
 
         .btn-active {
             width: 100%;
-            padding: 15px;
+            padding: 14px;
             border: none;
-            border-radius: 15px;
-            background: linear-gradient(135deg, #0f2027, #2c5364);
+            border-radius: 14px;
+            background: linear-gradient(135deg, #1a3b5e, #2c5282);
             color: white;
             font-family: 'Tajawal', sans-serif;
-            font-size: 1.2em;
+            font-size: 1.1em;
             font-weight: 600;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
-            transition: all 0.3s ease;
+            gap: 12px;
+            transition: all 0.2s ease;
             text-decoration: none;
             border: 2px solid transparent;
         }
 
         .btn-active:hover {
             background: transparent;
-            color: #0f2027;
-            border-color: #0f2027;
-            transform: scale(1.02);
+            color: #1a3b5e;
+            border-color: #1a3b5e;
         }
 
         .btn-active i {
-            font-size: 1.3em;
+            font-size: 1.2em;
             color: #ffd700;
-            animation: bounce 2s infinite;
         }
 
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
+        .btn-coming-soon {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 14px;
+            background: #cbd5e0;
+            color: #4a5568;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: not-allowed;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
         }
 
         /* Active Evaluation Badge */
         .active-evaluation {
-            border: 3px solid #ffd700;
-            position: relative;
+            border: 2px solid #2c5282;
+            background: linear-gradient(145deg, #ffffff, #f5faff);
         }
 
-        .active-evaluation::after {
-            content: '✅ متاح الآن';
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: linear-gradient(135deg, #28a745, #20c997);
-            color: white;
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 0.9em;
-            font-weight: bold;
-            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
-            z-index: 1;
+        .active-evaluation .card-number {
+            background: #2c5282;
         }
 
-        /* Coming Soon Button */
-        .btn-coming-soon {
-            width: 100%;
-            padding: 15px;
-            border: none;
-            border-radius: 15px;
-            background: linear-gradient(135deg, #adb5bd, #6c757d);
-            color: white;
-            font-family: 'Tajawal', sans-serif;
-            font-size: 1.2em;
-            font-weight: 600;
-            cursor: not-allowed;
-            opacity: 0.7;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
+        /* Divider */
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #1a3b5e30, #2c528250, #1a3b5e30, transparent);
+            margin: 25px 0;
         }
 
         /* Footer */
         .footer {
-            margin-top: 60px;
+            margin-top: 45px;
             text-align: center;
-            padding: 30px;
-            background: linear-gradient(135deg, #0f2027, #2c5364);
-            border-radius: 25px;
-            color: white;
+            padding: 25px;
+            background: #f0f7ff;
+            border-radius: 20px;
+            color: #1a3b5e;
+            border: 1px solid #cddfff;
         }
 
         .footer i {
-            color: #ffd700;
+            color: #2c5282;
             margin: 0 5px;
         }
 
-        .footer a {
-            color: #ffd700;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Update Section */
-        .update-section {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 40px 0;
-        }
-
-        .update-badge {
-            background: white;
-            padding: 15px 30px;
-            border-radius: 50px;
+        /* Update Note */
+        .update-note {
             display: flex;
             align-items: center;
-            gap: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border: 2px solid #2c5364;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px 0 15px;
+            padding: 15px 25px;
+            background: #f0f7ff;
+            border-radius: 50px;
+            border: 1px solid #cddfff;
         }
 
-        .update-badge i {
-            color: #ffd700;
-            font-size: 1.3em;
+        .update-note span {
+            color: #1a3b5e;
+            font-size: 1.1em;
+        }
+
+        .update-note i {
+            color: #2c5282;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .container { padding: 15px; }
-            .header h1 { font-size: 2em; }
+            .container { padding: 20px; }
+            .header h1 { font-size: 2.2em; }
             .header h2 { font-size: 1.3em; }
-            .lesson-image { height: 120px; }
+            .stat-card { min-width: 100%; }
+            .card-title { font-size: 1.3em; }
         }
     </style>
 </head>
@@ -425,42 +342,35 @@
         <div class="header">
             <h1>
                 <i class="fas fa-flask"></i>
-                منارة الفيزياء التعليمية
+                تقييمات الفيزياء
             </h1>
             <h2>
                 <i class="fas fa-graduation-cap"></i>
-                تقييمات الصف الثاني الثانوي - الفصل الدراسي الثاني
+                الصف الثاني الثانوي - الفصل الدراسي الثاني
             </h2>
         </div>
 
         <!-- Stats Section -->
         <div class="stats-section">
             <div class="stat-card">
-                <div class="stat-icon"><i class="fas fa-book-open"></i></div>
+                <div class="stat-icon"><i class="fas fa-book"></i></div>
                 <div class="stat-info">
-                    <h3>إجمالي الدروس</h3>
+                    <h3>عدد الدروس</h3>
                     <p>12 درس</p>
                 </div>
             </div>
             <div class="stat-card">
-                <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+                <div class="stat-icon"><i class="fas fa-check"></i></div>
                 <div class="stat-info">
-                    <h3>التقييمات المتاحة</h3>
-                    <p>6 من 12</p>
+                    <h3>متاح الآن</h3>
+                    <p>6 دروس</p>
                 </div>
             </div>
             <div class="stat-card">
                 <div class="stat-icon"><i class="fas fa-download"></i></div>
                 <div class="stat-info">
-                    <h3>إجمالي التحميلات</h3>
-                    <p>2,547</p>
-                </div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon"><i class="fas fa-users"></i></div>
-                <div class="stat-info">
-                    <h3>عدد الطلاب</h3>
-                    <p>1,280+</p>
+                    <h3>مرات التحميل</h3>
+                    <p>1,284</p>
                 </div>
             </div>
         </div>
@@ -468,273 +378,272 @@
         <!-- Progress Section -->
         <div class="progress-section">
             <div class="progress-title">
-                <i class="fas fa-chart-line" style="color: #0f2027;"></i>
-                <h3>تقدم المنهج - 50% مكتمل</h3>
+                <i class="fas fa-chart-simple" style="color: #1a3b5e;"></i>
+                <span>تقدم المنهج الدراسي</span>
             </div>
             <div class="progress-bar-container">
-                <div class="progress-bar" style="width: 50%">6 من 12 دروس</div>
+                <div class="progress-bar" style="width: 50%">6 من 12 درس</div>
             </div>
         </div>
 
-        <!-- Update Section -->
-        <div class="update-section">
-            <div class="update-badge">
-                <i class="fas fa-check-circle" style="color: #28a745;"></i>
-                <span>التقييمات 1-6 متاحة الآن للتحميل</span>
-            </div>
-            <div class="update-badge">
-                <i class="fas fa-hourglass-half" style="color: #ffc107;"></i>
-                <span>التقييمات 7-12 قريباً</span>
-            </div>
+        <!-- Update Note -->
+        <div class="update-note">
+            <i class="fas fa-circle-check" style="color: #2c5282;"></i>
+            <span>التقييمات من الأول حتى السادس متاحة الآن</span>
+            <i class="fas fa-circle-info" style="color: #1a3b5e;"></i>
+            <span>باقي التقييمات سيتم إضافتها قريباً</span>
         </div>
+
+        <!-- Divider -->
+        <div class="divider"></div>
 
         <!-- Evaluations Grid -->
         <div class="evaluations-grid">
-            <!-- التقييم 1: الشغل - مفعل -->
+            <!-- التقييم الأول: الشغل - مفعل -->
             <div class="evaluation-card active-evaluation">
-                <div class="card-number">1</div>
-                <div class="lesson-image" style="background-image: url('https://cdn.pixabay.com/photo/2017/07/06/20/19/mechanic-2479316_1280.jpg');">
-                    <div class="lesson-image-overlay">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
+                <span class="card-number">1</span>
+                <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس الأول</span>
+                <div class="card-title">التقييم الأول - الشغل</div>
+                <div class="card-description">
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    الشغل المبذول بواسطة قوة ثابتة<br>
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    وحدة قياس الشغل<br>
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    الشغل المبذول بواسطة قوة متغيرة<br>
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    تطبيقات على الشغل في الحياة اليومية
                 </div>
-                <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس الأول - متاح</span>
-                <div class="card-title">تقييم الشغل</div>
-                <div class="card-subtitle">مفاهيم الشغل - الشغل المبذول بواسطة قوة ثابتة - وحدة قياس الشغل - تطبيقات حياتية</div>
-                <a href="https://example.com/uploads/evaluations/lesson1_work.pdf" class="btn-active" target="_blank">
+                <a href="#" class="btn-active" target="_blank">
                     <i class="fas fa-download"></i>
                     تحميل التقييم الأول
                 </a>
             </div>
 
-            <!-- التقييم 2: طاقة الحركة والوضع - مفعل -->
+            <!-- التقييم الثاني: طاقة الحركة والوضع - مفعل -->
             <div class="evaluation-card active-evaluation">
-                <div class="card-number">2</div>
-                <div class="lesson-image" style="background-image: url('https://cdn.pixabay.com/photo/2017/07/03/03/19/roller-coaster-2466465_1280.jpg');">
-                    <div class="lesson-image-overlay">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
+                <span class="card-number">2</span>
+                <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس الثاني</span>
+                <div class="card-title">التقييم الثاني - طاقة الحركة والوضع</div>
+                <div class="card-description">
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    طاقة الحركة وقانونها<br>
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    طاقة الوضع وقانونها<br>
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    العلاقة بين طاقة الحركة وطاقة الوضع<br>
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    تحولات الطاقة
                 </div>
-                <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس الثاني - متاح</span>
-                <div class="card-title">تقييم طاقة الحركة والوضع</div>
-                <div class="card-subtitle">طاقة الحركة - طاقة الوضع - العلاقة بينهما - تحولات الطاقة في الألعاب</div>
-                <a href="https://example.com/uploads/evaluations/lesson2_kinetic_potential.pdf" class="btn-active" target="_blank">
+                <a href="#" class="btn-active" target="_blank">
                     <i class="fas fa-download"></i>
                     تحميل التقييم الثاني
                 </a>
             </div>
 
-            <!-- التقييم 3: قانون بقاء الطاقة - مفعل -->
+            <!-- التقييم الثالث: قانون بقاء الطاقة - مفعل -->
             <div class="evaluation-card active-evaluation">
-                <div class="card-number">3</div>
-                <div class="lesson-image" style="background-image: url('https://cdn.pixabay.com/photo/2017/08/05/13/00/energy-2583182_1280.jpg');">
-                    <div class="lesson-image-overlay">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
+                <span class="card-number">3</span>
+                <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس الثالث</span>
+                <div class="card-title">التقييم الثالث - قانون بقاء الطاقة</div>
+                <div class="card-description">
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    نص قانون بقاء الطاقة الميكانيكية<br>
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    تطبيقات على بقاء الطاقة (البندول)<br>
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    تطبيقات على بقاء الطاقة (النابض)<br>
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    مسائل على قانون بقاء الطاقة
                 </div>
-                <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس الثالث - متاح</span>
-                <div class="card-title">تقييم قانون بقاء الطاقة</div>
-                <div class="card-subtitle">قانون بقاء الطاقة الميكانيكية - تطبيقات على بقاء الطاقة - البندول - النابض</div>
-                <a href="https://example.com/uploads/evaluations/lesson3_energy_conservation.pdf" class="btn-active" target="_blank">
+                <a href="#" class="btn-active" target="_blank">
                     <i class="fas fa-download"></i>
                     تحميل التقييم الثالث
                 </a>
             </div>
 
-            <!-- التقييم 4: الحركة الإهتزازية - مفعل -->
+            <!-- التقييم الرابع: الحركة الإهتزازية - مفعل -->
             <div class="evaluation-card active-evaluation">
-                <div class="card-number">4</div>
-                <div class="lesson-image" style="background-image: url('https://cdn.pixabay.com/photo/2014/04/05/09/20/pendulum-314371_1280.jpg');">
-                    <div class="lesson-image-overlay">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
+                <span class="card-number">4</span>
+                <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس الرابع</span>
+                <div class="card-title">التقييم الرابع - الحركة الإهتزازية</div>
+                <div class="card-description">
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    تعريف الحركة الإهتزازية<br>
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    خصائص الحركة الإهتزازية (السعة - التردد - الزمن الدوري)<br>
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    البندول البسيط<br>
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    النابض
                 </div>
-                <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس الرابع - متاح</span>
-                <div class="card-title">تقييم الحركة الإهتزازية</div>
-                <div class="card-subtitle">تعريف الحركة الإهتزازية - خصائصها - البندول البسيط - النابض - السعة - التردد</div>
-                <a href="https://example.com/uploads/evaluations/lesson4_oscillatory.pdf" class="btn-active" target="_blank">
+                <a href="https://github.dev/ktswbsa-dotcom/Quizs_PHYSICS.github.io/blob/main/PHYSICS_Arabic_Sec2_TR2_W4.pdf" class="btn-active" target="_blank">
                     <i class="fas fa-download"></i>
                     تحميل التقييم الرابع
                 </a>
             </div>
 
-            <!-- التقييم 5: الحركة الموجية - مفعل -->
+            <!-- التقييم الخامس: الحركة الموجية - مفعل -->
             <div class="evaluation-card active-evaluation">
-                <div class="card-number">5</div>
-                <div class="lesson-image" style="background-image: url('https://cdn.pixabay.com/photo/2016/10/20/18/35/earth-1756274_1280.jpg');">
-                    <div class="lesson-image-overlay">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
+                <span class="card-number">5</span>
+                <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس الخامس</span>
+                <div class="card-title">التقييم الخامس - الحركة الموجية</div>
+                <div class="card-description">
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    أنواع الموجات (المستعرضة - الطولية)<br>
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    خصائص الموجات (الطول الموجي - السرعة - التردد)<br>
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    العلاقة بين سرعة الموجة والتردد<br>
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    تطبيقات على الموجات
                 </div>
-                <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس الخامس - متاح</span>
-                <div class="card-title">تقييم الحركة الموجية</div>
-                <div class="card-subtitle">أنواع الموجات - خصائص الموجات - سرعة الموجة - الطول الموجي - التردد</div>
-                <a href="https://example.com/uploads/evaluations/lesson5_waves.pdf" class="btn-active" target="_blank">
+                <a href="#" class="btn-active" target="_blank">
                     <i class="fas fa-download"></i>
                     تحميل التقييم الخامس
                 </a>
             </div>
 
-            <!-- التقييم 6: الضوء وإنعكاسه - مفعل -->
+            <!-- التقييم السادس: الضوء وإنعكاسه - مفعل -->
             <div class="evaluation-card active-evaluation">
-                <div class="card-number">6</div>
-                <div class="lesson-image" style="background-image: url('https://cdn.pixabay.com/photo/2017/04/11/21/54/glass-2222909_1280.jpg');">
-                    <div class="lesson-image-overlay">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
+                <span class="card-number">6</span>
+                <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس السادس</span>
+                <div class="card-title">التقييم السادس - الضوء وإنعكاسه</div>
+                <div class="card-description">
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    الطبيعة الموجية للضوء<br>
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    قوانين الإنعكاس<br>
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    المرايا المستوية<br>
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #2c5282; margin-left: 8px;"></i>
+                    المرايا الكروية
                 </div>
-                <span class="lesson-badge"><i class="fas fa-star" style="color: #ffd700;"></i> الدرس السادس - متاح</span>
-                <div class="card-title">تقييم الضوء وإنعكاسه</div>
-                <div class="card-subtitle">الطبيعة الموجية للضوء - قوانين الإنعكاس - المرايا المستوية والكروية - التطبيقات</div>
-                <a href="https://example.com/uploads/evaluations/lesson6_light.pdf" class="btn-active" target="_blank">
+                <a href="#" class="btn-active" target="_blank">
                     <i class="fas fa-download"></i>
                     تحميل التقييم السادس
                 </a>
             </div>
 
-            <!-- التقييم 7: إنكسار الضوء - غير مفعل -->
+            <!-- التقييم السابع: إنكسار الضوء - غير مفعل -->
             <div class="evaluation-card">
-                <div class="card-number">7</div>
-                <div class="lesson-image" style="background-image: url('https://cdn.pixabay.com/photo/2018/05/07/21/50/glass-3381582_1280.jpg');">
-                    <div class="lesson-image-overlay">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
-                </div>
+                <span class="card-number">7</span>
                 <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس السابع</span>
-                <div class="card-title">تقييم إنكسار الضوء</div>
-                <div class="card-subtitle">قوانين الإنكسار - معامل الإنكسار - العدسات - تطبيقات على إنكسار الضوء</div>
+                <div class="card-title">التقييم السابع - إنكسار الضوء</div>
+                <div class="card-description">
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #7f8c8d; margin-left: 8px;"></i>
+                    قوانين الإنكسار - معامل الإنكسار - العدسات
+                </div>
                 <button class="btn-coming-soon" disabled>
-                    <i class="fas fa-hourglass-half"></i>
+                    <i class="fas fa-clock"></i>
                     سيتوفر قريباً
                 </button>
             </div>
 
-            <!-- التقييم 8: تدخل وحيود - غير مفعل -->
+            <!-- التقييم الثامن: تدخل وحيود - غير مفعل -->
             <div class="evaluation-card">
-                <div class="card-number">8</div>
-                <div class="lesson-image" style="background-image: url('https://cdn.pixabay.com/photo/2017/07/10/23/43/christmas-2491651_1280.jpg');">
-                    <div class="lesson-image-overlay">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
-                </div>
+                <span class="card-number">8</span>
                 <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس الثامن</span>
-                <div class="card-title">تقييم تدخل وحيود</div>
-                <div class="card-subtitle">ظاهرة التدخل - شروط حدوث التدخل - الحيود - تطبيقات في الحياة</div>
+                <div class="card-title">التقييم الثامن - تدخل وحيود</div>
+                <div class="card-description">
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #7f8c8d; margin-left: 8px;"></i>
+                    ظاهرة التدخل - شروط التدخل - الحيود
+                </div>
                 <button class="btn-coming-soon" disabled>
-                    <i class="fas fa-hourglass-half"></i>
+                    <i class="fas fa-clock"></i>
                     سيتوفر قريباً
                 </button>
             </div>
 
-            <!-- التقييم 9: الزوايا الحرجة والإنعكاس الكلي - غير مفعل -->
+            <!-- التقييم التاسع: الزوايا الحرجة - غير مفعل -->
             <div class="evaluation-card">
-                <div class="card-number">9</div>
-                <div class="lesson-image" style="background-image: url('https://cdn.pixabay.com/photo/2017/03/08/17/53/fiber-optics-2127355_1280.jpg');">
-                    <div class="lesson-image-overlay">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
-                </div>
+                <span class="card-number">9</span>
                 <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس التاسع</span>
-                <div class="card-title">تقييم الزوايا الحرجة والإنعكاس الكلي</div>
-                <div class="card-subtitle">الزاوية الحرجة - شروط حدوث الإنعكاس الكلي - الألياف الضوئية</div>
+                <div class="card-title">التقييم التاسع - الزوايا الحرجة والإنعكاس الكلى</div>
+                <div class="card-description">
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #7f8c8d; margin-left: 8px;"></i>
+                    الزاوية الحرجة - الإنعكاس الكلي - الألياف الضوئية
+                </div>
                 <button class="btn-coming-soon" disabled>
-                    <i class="fas fa-hourglass-half"></i>
+                    <i class="fas fa-clock"></i>
                     سيتوفر قريباً
                 </button>
             </div>
 
-            <!-- التقييم 10: المنشور الثلاثي - غير مفعل -->
+            <!-- التقييم العاشر: المنشور الثلاثي - غير مفعل -->
             <div class="evaluation-card">
-                <div class="card-number">10</div>
-                <div class="lesson-image" style="background-image: url('https://cdn.pixabay.com/photo/2016/03/27/19/43/prism-1283962_1280.jpg');">
-                    <div class="lesson-image-overlay">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
-                </div>
+                <span class="card-number">10</span>
                 <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس العاشر</span>
-                <div class="card-title">تقييم المنشور الثلاثي</div>
-                <div class="card-subtitle">المنشور الثلاثي - زاوية النهاية الصغرى للإنحراف - تحليل الضوء</div>
+                <div class="card-title">التقييم العاشر - المنشور الثلاثى</div>
+                <div class="card-description">
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #7f8c8d; margin-left: 8px;"></i>
+                    المنشور الثلاثي - زاوية النهاية الصغرى للإنحراف
+                </div>
                 <button class="btn-coming-soon" disabled>
-                    <i class="fas fa-hourglass-half"></i>
+                    <i class="fas fa-clock"></i>
                     سيتوفر قريباً
                 </button>
             </div>
 
-            <!-- التقييم 11: قوانين الحركة الدائرية - غير مفعل -->
+            <!-- التقييم الحادي عشر: الحركة الدائرية - غير مفعل -->
             <div class="evaluation-card">
-                <div class="card-number">11</div>
-                <div class="lesson-image" style="background-image: url('https://cdn.pixabay.com/photo/2017/03/29/13/15/circular-motion-2185005_1280.jpg');">
-                    <div class="lesson-image-overlay">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
-                </div>
+                <span class="card-number">11</span>
                 <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس الحادي عشر</span>
-                <div class="card-title">تقييم قوانين الحركة الدائرية</div>
-                <div class="card-subtitle">الحركة الدائرية المنتظمة - العجلة المركزية - القوة المركزية - التطبيقات</div>
+                <div class="card-title">التقييم الحادي عشر - قوانين الحركة الدائرية</div>
+                <div class="card-description">
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #7f8c8d; margin-left: 8px;"></i>
+                    الحركة الدائرية - العجلة المركزية - القوة المركزية
+                </div>
                 <button class="btn-coming-soon" disabled>
-                    <i class="fas fa-hourglass-half"></i>
+                    <i class="fas fa-clock"></i>
                     سيتوفر قريباً
                 </button>
             </div>
 
-            <!-- التقييم 12: الجاذبية والسرعة المدارية - غير مفعل -->
+            <!-- التقييم الثاني عشر: الجاذبية - غير مفعل -->
             <div class="evaluation-card">
-                <div class="card-number">12</div>
-                <div class="lesson-image" style="background-image: url('https://cdn.pixabay.com/photo/2011/12/14/12/21/orbits-11097_1280.jpg');">
-                    <div class="lesson-image-overlay">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
-                </div>
+                <span class="card-number">12</span>
                 <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس الثاني عشر</span>
-                <div class="card-title">تقييم قوانين الجاذبية</div>
-                <div class="card-subtitle">قانون الجذب العام - السرعة المدارية - الأقمار الصناعية - تطبيقات</div>
+                <div class="card-title">التقييم الثاني عشر - قوانين الجاذبية</div>
+                <div class="card-description">
+                    <i class="fas fa-circle" style="font-size: 0.4em; vertical-align: middle; color: #7f8c8d; margin-left: 8px;"></i>
+                    قانون الجذب العام - السرعة المدارية - الأقمار الصناعية
+                </div>
                 <button class="btn-coming-soon" disabled>
-                    <i class="fas fa-hourglass-half"></i>
+                    <i class="fas fa-clock"></i>
                     سيتوفر قريباً
                 </button>
             </div>
         </div>
 
+        <!-- Divider -->
+        <div class="divider"></div>
+
         <!-- Footer -->
         <div class="footer">
             <i class="fas fa-heart"></i>
-            منارة الفيزياء - حيث العلم نور 
+            جميع الحقوق محفوظة - وزارة التربية والتعليم
             <i class="fas fa-heart"></i>
             <br>
-            <div style="margin-top: 20px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                <span><i class="fas fa-envelope"></i> physics@education.com</span>
-                <span><i class="fas fa-phone"></i> 01234567890</span>
-                <span><i class="fas fa-map-marker-alt"></i> مصر - وزارة التربية والتعليم</span>
-            </div>
+            <span style="font-size: 0.9em; opacity: 0.8; margin-top: 10px; display: block;">
+                <i class="fas fa-envelope"></i> physics@edu.eg • 
+                <i class="fas fa-phone"></i> 01234567890
+            </span>
         </div>
     </div>
 
     <script>
         console.log(`
-            ╔══════════════════════════════════════════════════════════╗
-            ║     🔬 موقع تقييمات الفيزياء - الصف الثاني الثانوي 🔬    ║
-            ╠══════════════════════════════════════════════════════════╣
-            ║  ✅ التقييمات المفعلة: 1 - 2 - 3 - 4 - 5 - 6             ║
-            ║  ⏳ التقييمات القادمة: 7 إلى 12                         ║
-            ║  📊 نسبة الإنجاز: 50%                                    ║
-            ╠══════════════════════════════════════════════════════════╣
-            ║  🔧 للتعديل:                                             ║
-            ║  1. غير روابط التحميل في خاصية href للأول 6 تقييمات     ║
-            ║  2. ارفع ملفات PDF في مجلد: /uploads/evaluations/       ║
-            ║  3. الصور مستضافة من Pixabay (حقوق حرة)                  ║
-            ╚══════════════════════════════════════════════════════════╝
+            ╔══════════════════════════════════════════╗
+            ║     تقييمات الفيزياء - الصف الثاني      ║
+            ╠══════════════════════════════════════════╣
+            ║  ✅ التقييمات المتاحة: 1 - 2 - 3 - 4 - 5 - 6 ║
+            ║  ⏳ التقييمات القادمة: 7 إلى 12          ║
+            ║  📊 نسبة الإنجاز: 50%                    ║
+            ╠══════════════════════════════════════════╣
+            ║  للتعديل: غير روابط التحميل في href      ║
+            ╚══════════════════════════════════════════╝
         `);
-
-        // إحصائيات متحركة
-        let downloadCount = 2547;
-        const statElement = document.querySelectorAll('.stat-info p')[2];
-        
-        setInterval(() => {
-            downloadCount += Math.floor(Math.random() * 10);
-            if(statElement) {
-                statElement.textContent = downloadCount.toLocaleString();
-            }
-        }, 5000);
     </script>
 </body>
 </html>
