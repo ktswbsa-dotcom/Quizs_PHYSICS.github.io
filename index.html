@@ -17,18 +17,19 @@
 
         body {
             font-family: 'Tajawal', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             min-height: 100vh;
             padding: 20px;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
             background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
+            border-radius: 30px;
             padding: 30px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
         }
 
         /* Header Section */
@@ -36,53 +37,109 @@
             text-align: center;
             margin-bottom: 40px;
             padding-bottom: 20px;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 4px solid #2a5298;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 20px;
+            padding: 30px;
         }
 
         .header h1 {
-            color: #333;
-            font-size: 2.5em;
+            color: #1e3c72;
+            font-size: 2.8em;
             margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
         .header h1 i {
-            color: #667eea;
-            margin-left: 10px;
+            color: #2a5298;
+            margin-left: 15px;
+            animation: float 3s ease-in-out infinite;
         }
 
         .header h2 {
-            color: #666;
-            font-size: 1.5em;
-            font-weight: 500;
+            color: #2a5298;
+            font-size: 1.8em;
+            font-weight: 600;
         }
 
         .header h2 i {
-            color: #764ba2;
+            color: #1e3c72;
             margin-left: 10px;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Stats Section */
+        .stats-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #ffffff, #f0f4ff);
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex: 1;
+            min-width: 200px;
+            border: 1px solid rgba(42, 82, 152, 0.2);
+        }
+
+        .stat-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5em;
+        }
+
+        .stat-info h3 {
+            color: #1e3c72;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .stat-info p {
+            color: #2a5298;
+            font-size: 1.3em;
+            font-weight: bold;
         }
 
         /* Evaluations Grid */
         .evaluations-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 25px;
             margin-top: 30px;
         }
 
         .evaluation-card {
             background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #eee;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(42, 82, 152, 0.1);
             position: relative;
             overflow: hidden;
         }
 
         .evaluation-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.3);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(26, 67, 113, 0.3);
         }
 
         .evaluation-card::before {
@@ -91,42 +148,56 @@
             top: 0;
             right: 0;
             width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            height: 6px;
+            background: linear-gradient(90deg, #1e3c72, #2a5298, #4a6fa5);
         }
 
         .card-number {
             display: inline-block;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             text-align: center;
-            line-height: 40px;
+            line-height: 45px;
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 1.3em;
             margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(26, 67, 113, 0.3);
         }
 
         .card-title {
-            font-size: 1.3em;
-            color: #333;
+            font-size: 1.4em;
+            color: #1e3c72;
             margin-bottom: 10px;
             font-weight: 700;
         }
 
         .card-subtitle {
-            color: #666;
+            color: #555;
             margin-bottom: 20px;
-            font-size: 0.95em;
+            font-size: 1em;
+            line-height: 1.6;
+            min-height: 50px;
+        }
+
+        .lesson-badge {
+            background: #e3f2fd;
+            color: #1e3c72;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            display: inline-block;
+            margin-bottom: 15px;
+            border-right: 3px solid #2a5298;
         }
 
         .btn-coming-soon {
             width: 100%;
-            padding: 12px;
+            padding: 14px;
             border: none;
-            border-radius: 8px;
+            border-radius: 12px;
             background: linear-gradient(135deg, #a8a8a8, #808080);
             color: white;
             font-family: 'Tajawal', sans-serif;
@@ -141,17 +212,12 @@
             transition: all 0.3s ease;
         }
 
-        .btn-coming-soon i {
-            font-size: 1.2em;
-        }
-
-        /* Active Button Style (سنستخدمه لاحقاً) */
         .btn-active {
             width: 100%;
-            padding: 12px;
+            padding: 14px;
             border: none;
-            border-radius: 8px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 12px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
             font-family: 'Tajawal', sans-serif;
             font-size: 1.1em;
@@ -160,85 +226,112 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 12px;
             transition: all 0.3s ease;
             text-decoration: none;
-            border: 1px solid transparent;
+            border: 2px solid transparent;
         }
 
         .btn-active:hover {
             background: transparent;
-            color: #667eea;
-            border-color: #667eea;
+            color: #1e3c72;
+            border-color: #1e3c72;
             transform: scale(1.02);
         }
 
         .btn-active i {
             font-size: 1.2em;
+            animation: downloadPulse 2s infinite;
+        }
+
+        @keyframes downloadPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Active Evaluation Highlight */
+        .active-evaluation {
+            border: 3px solid #2a5298;
+            position: relative;
+        }
+
+        .active-evaluation::after {
+            content: '✅ متوفر الآن';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: linear-gradient(135deg, #00b09b, #96c93d);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 25px;
+            font-size: 0.85em;
+            font-weight: bold;
         }
 
         /* Footer */
         .footer {
-            margin-top: 40px;
+            margin-top: 50px;
             text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #666;
+            padding: 25px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            border-radius: 20px;
+            color: white;
         }
 
         .footer i {
-            color: #667eea;
+            color: #ffd700;
             margin: 0 5px;
         }
 
-        /* Instructions Section */
-        .instructions {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 30px;
-            border-right: 5px solid #667eea;
+        .footer a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
         }
 
-        .instructions h3 {
-            color: #333;
+        /* Progress Section */
+        .progress-section {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .progress-title {
+            color: #1e3c72;
             margin-bottom: 15px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .instructions h3 i {
-            color: #667eea;
-        }
-
-        .instructions ol {
-            padding-right: 20px;
-            color: #555;
-            line-height: 2;
-        }
-
-        .instructions code {
+        .progress-bar-container {
+            width: 100%;
+            height: 20px;
             background: #e9ecef;
-            padding: 2px 8px;
-            border-radius: 5px;
-            color: #d63384;
-            font-family: monospace;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #1e3c72, #2a5298);
+            border-radius: 10px;
+            width: 8.33%;
+            transition: width 0.5s ease;
+            position: relative;
+            color: white;
+            font-size: 0.8em;
+            line-height: 20px;
+            padding-right: 10px;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-            }
-            
-            .header h1 {
-                font-size: 2em;
-            }
-            
-            .evaluations-grid {
-                grid-template-columns: 1fr;
-            }
+            .container { padding: 15px; }
+            .header h1 { font-size: 2em; }
+            .header h2 { font-size: 1.3em; }
+            .stat-card { min-width: 150px; }
         }
     </style>
 </head>
@@ -248,109 +341,254 @@
         <div class="header">
             <h1>
                 <i class="fas fa-flask"></i>
-                تقييمات مادة الفيزياء
+                بنك تقييمات الفيزياء
             </h1>
             <h2>
                 <i class="fas fa-graduation-cap"></i>
-                الصف الثاني الثانوي - الفصل الدراسي الأول
+                الصف الثاني الثانوي - الفصل الدراسي الثاني
             </h2>
         </div>
 
-        <!-- Evaluations Grid -->
-        <div class="evaluations-grid" id="evaluationsGrid">
-            <!-- سيتم إنشاء البطاقات بواسطة JavaScript -->
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-book-open"></i></div>
+                <div class="stat-info">
+                    <h3>إجمالي الدروس</h3>
+                    <p>12 درس</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+                <div class="stat-info">
+                    <h3>التقييمات المتاحة</h3>
+                    <p>1 من 12</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-download"></i></div>
+                <div class="stat-info">
+                    <h3>مرات التحميل</h3>
+                    <p>150+</p>
+                </div>
+            </div>
         </div>
 
-        <!-- Instructions for developer -->
-        <div class="instructions">
-            <h3>
-                <i class="fas fa-code"></i>
-                تعليمات للمطور: أماكن رفع الملفات
-            </h3>
-            <ol>
-                <li><strong>لتفعيل أي تقييم:</strong> قم بتغيير كلاس الزر من <code>btn-coming-soon</code> إلى <code>btn-active</code></li>
-                <li><strong>لإضافة رابط التقييم:</strong> قم بإضافة الرابط في خاصية <code>onclick</code> أو استخدم <code>&lt;a&gt;</code> بداخل الزر</li>
-                <li><strong>مثال للرابط المباشر:</strong> <code>onclick="window.open('https://example.com/evaluation1.pdf', '_blank')"</code></li>
-                <li><strong>لرفع الملفات:</strong> يمكنك رفعها على أي خدمة استضافة (Google Drive, Dropbox, أو استضافة خاصة)</li>
-                <li><strong>مسار رفع الملفات المقترح:</strong> مجلد <code>/uploads/evaluations/</code> في استضافتك</li>
-            </ol>
+        <!-- Progress Section -->
+        <div class="progress-section">
+            <div class="progress-title">
+                <i class="fas fa-chart-line" style="color: #1e3c72;"></i>
+                <h3>نسبة إنجاز التقييمات</h3>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" style="width: 8.33%">8.33%</div>
+            </div>
+        </div>
+
+        <!-- Evaluations Grid -->
+        <div class="evaluations-grid">
+            <!-- التقييم 1: الشغل -->
+            <div class="evaluation-card">
+                <span class="card-number">1</span>
+                <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس الأول</span>
+                <div class="card-title">تقييم الشغل</div>
+                <div class="card-subtitle">مفاهيم الشغل - الشغل المبذول بواسطة قوة ثابتة - وحدة قياس الشغل</div>
+                <button class="btn-coming-soon" disabled>
+                    <i class="fas fa-hourglass-half"></i>
+                    سيتوفر قريباً
+                </button>
+            </div>
+
+            <!-- التقييم 2: طاقة الحركة والوضع -->
+            <div class="evaluation-card">
+                <span class="card-number">2</span>
+                <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس الثاني</span>
+                <div class="card-title">تقييم طاقة الحركة والوضع</div>
+                <div class="card-subtitle">طاقة الحركة - طاقة الوضع - العلاقة بينهما - تحولات الطاقة</div>
+                <button class="btn-coming-soon" disabled>
+                    <i class="fas fa-hourglass-half"></i>
+                    سيتوفر قريباً
+                </button>
+            </div>
+
+            <!-- التقييم 3: قانون بقاء الطاقة -->
+            <div class="evaluation-card">
+                <span class="card-number">3</span>
+                <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس الثالث</span>
+                <div class="card-title">تقييم قانون بقاء الطاقة</div>
+                <div class="card-subtitle">قانون بقاء الطاقة الميكانيكية - تطبيقات على بقاء الطاقة</div>
+                <button class="btn-coming-soon" disabled>
+                    <i class="fas fa-hourglass-half"></i>
+                    سيتوفر قريباً
+                </button>
+            </div>
+
+            <!-- التقييم 4: الحركة الإهتزازية -->
+            <div class="evaluation-card">
+                <span class="card-number">4</span>
+                <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس الرابع</span>
+                <div class="card-title">تقييم الحركة الإهتزازية</div>
+                <div class="card-subtitle">تعريف الحركة الإهتزازية - خصائصها - البندول البسيط - النابض</div>
+                <button class="btn-coming-soon" disabled>
+                    <i class="fas fa-hourglass-half"></i>
+                    سيتوفر قريباً
+                </button>
+            </div>
+
+            <!-- التقييم 5: الحركة الموجية -->
+            <div class="evaluation-card">
+                <span class="card-number">5</span>
+                <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس الخامس</span>
+                <div class="card-title">تقييم الحركة الموجية</div>
+                <div class="card-subtitle">أنواع الموجات - خصائص الموجات - سرعة الموجة - الطول الموجي</div>
+                <button class="btn-coming-soon" disabled>
+                    <i class="fas fa-hourglass-half"></i>
+                    سيتوفر قريباً
+                </button>
+            </div>
+
+            <!-- التقييم 6: الضوء وإنعكاسه - مفعل -->
+            <div class="evaluation-card active-evaluation">
+                <span class="card-number">6</span>
+                <span class="lesson-badge"><i class="fas fa-star" style="color: #ffd700;"></i> الدرس السادس - متاح الآن</span>
+                <div class="card-title">تقييم الضوء وإنعكاسه</div>
+                <div class="card-subtitle">الطبيعة الموجية للضوء - قوانين الإنعكاس - المرايا المستوية والكروية</div>
+                <!-- زر مفعل مع رابط التحميل - قم بتغيير الرابط أدناه -->
+                <a href="https://example.com/uploads/evaluations/physics_lesson6_light.pdf" class="btn-active" target="_blank">
+                    <i class="fas fa-download"></i>
+                    تحميل تقييم الدرس السادس
+                </a>
+            </div>
+
+            <!-- التقييم 7: إنكسار الضوء -->
+            <div class="evaluation-card">
+                <span class="card-number">7</span>
+                <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس السابع</span>
+                <div class="card-title">تقييم إنكسار الضوء</div>
+                <div class="card-subtitle">قوانين الإنكسار - معامل الإنكسار - العدسات - تطبيقات على إنكسار الضوء</div>
+                <button class="btn-coming-soon" disabled>
+                    <i class="fas fa-hourglass-half"></i>
+                    سيتوفر قريباً
+                </button>
+            </div>
+
+            <!-- التقييم 8: تدخل وحيود -->
+            <div class="evaluation-card">
+                <span class="card-number">8</span>
+                <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس الثامن</span>
+                <div class="card-title">تقييم تدخل وحيود</div>
+                <div class="card-subtitle">ظاهرة التدخل - شروط حدوث التدخل - الحيود - تطبيقات</div>
+                <button class="btn-coming-soon" disabled>
+                    <i class="fas fa-hourglass-half"></i>
+                    سيتوفر قريباً
+                </button>
+            </div>
+
+            <!-- التقييم 9: الزوايا الحرجة والإنعكاس الكلي -->
+            <div class="evaluation-card">
+                <span class="card-number">9</span>
+                <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس التاسع</span>
+                <div class="card-title">تقييم الزوايا الحرجة والإنعكاس الكلي</div>
+                <div class="card-subtitle">الزاوية الحرجة - شروط حدوث الإنعكاس الكلي - الألياف الضوئية</div>
+                <button class="btn-coming-soon" disabled>
+                    <i class="fas fa-hourglass-half"></i>
+                    سيتوفر قريباً
+                </button>
+            </div>
+
+            <!-- التقييم 10: المنشور الثلاثي -->
+            <div class="evaluation-card">
+                <span class="card-number">10</span>
+                <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس العاشر</span>
+                <div class="card-title">تقييم المنشور الثلاثي</div>
+                <div class="card-subtitle">المنشور الثلاثي - زاوية النهاية الصغرى للإنحراف - تحليل الضوء</div>
+                <button class="btn-coming-soon" disabled>
+                    <i class="fas fa-hourglass-half"></i>
+                    سيتوفر قريباً
+                </button>
+            </div>
+
+            <!-- التقييم 11: قوانين الحركة الدائرية -->
+            <div class="evaluation-card">
+                <span class="card-number">11</span>
+                <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس الحادي عشر</span>
+                <div class="card-title">تقييم قوانين الحركة الدائرية</div>
+                <div class="card-subtitle">الحركة الدائرية المنتظمة - العجلة المركزية - القوة المركزية</div>
+                <button class="btn-coming-soon" disabled>
+                    <i class="fas fa-hourglass-half"></i>
+                    سيتوفر قريباً
+                </button>
+            </div>
+
+            <!-- التقييم 12: الجاذبية والسرعة المدارية -->
+            <div class="evaluation-card">
+                <span class="card-number">12</span>
+                <span class="lesson-badge"><i class="fas fa-cog"></i> الدرس الثاني عشر</span>
+                <div class="card-title">تقييم قوانين الجاذبية</div>
+                <div class="card-subtitle">قانون الجذب العام - السرعة المدارية - الأقمار الصناعية - تطبيقات</div>
+                <button class="btn-coming-soon" disabled>
+                    <i class="fas fa-hourglass-half"></i>
+                    سيتوفر قريباً
+                </button>
+            </div>
+        </div>
+
+        <!-- قسم التحديثات القادمة -->
+        <div style="margin-top: 40px; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+            <div style="background: linear-gradient(135deg, #667eea20, #764ba220); padding: 15px 25px; border-radius: 50px; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-calendar-alt" style="color: #1e3c72;"></i>
+                <span>التقييمات القادمة: سيتم إضافة تقييم جديد كل أسبوع</span>
+            </div>
+            <div style="background: linear-gradient(135deg, #667eea20, #764ba220); padding: 15px 25px; border-radius: 50px; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-bell" style="color: #1e3c72;"></i>
+                <span>الدرس القادم: قوانين نيوتن للحركة</span>
+            </div>
         </div>
 
         <!-- Footer -->
         <div class="footer">
             <i class="fas fa-heart"></i>
-            جميع الحقوق محفوظة - وزارة التربية والتعليم
+            منصة الفيزياء التعليمية - جميع الحقوق محفوظة 
             <i class="fas fa-heart"></i>
+            <br>
+            <small style="opacity: 0.8;">
+                <i class="fas fa-envelope"></i> contact@physics-platform.com | 
+                <i class="fas fa-phone"></i> 01123456789
+            </small>
         </div>
     </div>
 
     <script>
-        // قائمة التقييمات
-        const evaluations = [
-            { number: 1, title: "التقييم الأول", description: "تقييم الأسبوع الأول - الحركة الموجية" },
-            { number: 2, title: "التقييم الثاني", description: "تقييم الأسبوع الثاني - خصائص الموجات" },
-            { number: 3, title: "التقييم الثالث", description: "تقييم الأسبوع الثالث - انعكاس وانكسار الموجات" },
-            { number: 4, title: "التقييم الرابع", description: "تقييم الأسبوع الرابع - تداخل الموجات" },
-            { number: 5, title: "التقييم الخامس", description: "تقييم الأسبوع الخامس - الحيود" },
-            { number: 6, title: "التقييم السادس", description: "تقييم الأسبوع السادس - الصوت" },
-            { number: 7, title: "التقييم السابع", description: "تقييم الأسبوع السابع - خصائص الصوت" },
-            { number: 8, title: "التقييم الثامن", description: "تقييم الأسبوع الثامن - الضوء" },
-            { number: 9, title: "التقييم التاسع", description: "تقييم الأسبوع التاسع - انعكاس الضوء" },
-            { number: 10, title: "التقييم العاشر", description: "تقييم الأسبوع العاشر - انكسار الضوء" },
-            { number: 11, title: "التقييم الحادي عشر", description: "تقييم الأسبوع الحادي عشر - العدسات" },
-            { number: 12, title: "التقييم الثاني عشر", description: "تقييم الأسبوع الثاني عشر - مراجعة عامة" }
-        ];
-
-        // إنشاء بطاقات التقييمات
-        const grid = document.getElementById('evaluationsGrid');
-        
-        evaluations.forEach(eval => {
-            const card = document.createElement('div');
-            card.className = 'evaluation-card';
-            
-            card.innerHTML = `
-                <div class="card-number">${eval.number}</div>
-                <div class="card-title">${eval.title}</div>
-                <div class="card-subtitle">${eval.description}</div>
-                <button class="btn-coming-soon" disabled>
-                    <i class="fas fa-hourglass-half"></i>
-                    سيتوفر قريباً
-                </button>
-            `;
-            
-            grid.appendChild(card);
-        });
-
-        // شرح كيفية تفعيل الأزرار (للمطور)
+        // رسالة ترحيبية في الكونسول
         console.log(`
-            ===================================
-            كيفية تفعيل أزرار التقييمات:
-            ===================================
-            1. قم بتغيير كلاس الزر من 'btn-coming-soon' إلى 'btn-active'
-            2. قم بإزالة خاصية disabled
-            3. أضف رابط التقييم في onclick أو استخدم عنصر <a>
+            ██████╗ ██╗  ██╗██╗░░░██╗░██████╗██╗░█████╗░░██████╗
+            ██╔══██╗██║  ██║╚██╗░██╔╝██╔════╝██║██╔══██╗██╔════╝
+            ██████╔╝███████║░╚████╔╝░╚█████╗░██║██║░░╚═╝╚█████╗░
+            ██╔═══╝░██╔══██║░░╚██╔╝░░░╚═══██╗██║██║░░██╗░╚═══██╗
+            ██║░░░░░██║░░██║░░░██║░░░██████╔╝██║╚█████╔╝██████╔╝
+            ╚═╝░░░░░╚═╝░░╚═╝░░░╚═╝░░░╚═════╝░╚═╝░╚════╝░╚═════╝░
             
-            مثال للكود المفعل:
+            🔬 موقع تقييمات الفيزياء - الصف الثاني الثانوي 🔬
+            ==============================================
+            ✅ التقييم السادس (الضوء وإنعكاسه) مُفعل وجاهز للتحميل
+            📍 رابط التقييم الحالي: https://example.com/uploads/evaluations/physics_lesson6_light.pdf
+            ⏳ باقي التقييمات سيتم تفعيلها قريباً
             
-            <button class="btn-active" onclick="window.open('رابط_الملف', '_blank')">
-                <i class="fas fa-download"></i>
-                تحميل التقييم
-            </button>
-            
-            أو باستخدام رابط مباشر:
-            
-            <a href="رابط_الملف.pdf" class="btn-active" target="_blank">
-                <i class="fas fa-download"></i>
-                تحميل التقييم
-            </a>
-            
-            أماكن رفع الملفات المقترحة:
-            - مجلد /uploads/evaluations/ على السيرفر الخاص بك
-            - Google Drive (مع ضبط صلاحية الوصول للعامة)
-            - Dropbox
-            - أي خدمة استضافة ملفات
-            ===================================
+            🔧 للتعديل:
+            1. غير رابط التقييم السادس في خاصية href
+            2. لتفعيل تقييم آخر، غير كلاس الزر إلى btn-active وأضف الرابط
+            3. ارفع ملفات PDF في مجلد: /uploads/evaluations/
         `);
+
+        // إحصائيات تفاعلية (يمكن تفعيلها لاحقاً)
+        let downloadCount = 150;
+        const statElement = document.querySelector('.stat-info p');
+        
+        // محاكاة زيادة عدد التحميلات
+        setInterval(() => {
+            downloadCount += Math.floor(Math.random() * 5);
+            // يمكن تحديث العدد هنا
+        }, 10000);
     </script>
 </body>
 </html>
