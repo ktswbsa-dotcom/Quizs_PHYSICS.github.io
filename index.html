@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقييمات الفيزياء - الصف الثاني الثانوي</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header h1 i {
+            color: #667eea;
+            margin-left: 10px;
+        }
+
+        .header h2 {
+            color: #666;
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+
+        .header h2 i {
+            color: #764ba2;
+            margin-left: 10px;
+        }
+
+        /* Evaluations Grid */
+        .evaluations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .evaluation-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .evaluation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .evaluation-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .card-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .card-subtitle {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+
+        .btn-coming-soon {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #a8a8a8, #808080);
+            color: white;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1.1em;
+            font-weight: 500;
+            cursor: not-allowed;
+            opacity: 0.7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-coming-soon i {
+            font-size: 1.2em;
+        }
+
+        /* Active Button Style (سنستخدمه لاحقاً) */
+        .btn-active {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1.1em;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border: 1px solid transparent;
+        }
+
+        .btn-active:hover {
+            background: transparent;
+            color: #667eea;
+            border-color: #667eea;
+            transform: scale(1.02);
+        }
+
+        .btn-active i {
+            font-size: 1.2em;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+        }
+
+        .footer i {
+            color: #667eea;
+            margin: 0 5px;
+        }
+
+        /* Instructions Section */
+        .instructions {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            border-right: 5px solid #667eea;
+        }
+
+        .instructions h3 {
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .instructions h3 i {
+            color: #667eea;
+        }
+
+        .instructions ol {
+            padding-right: 20px;
+            color: #555;
+            line-height: 2;
+        }
+
+        .instructions code {
+            background: #e9ecef;
+            padding: 2px 8px;
+            border-radius: 5px;
+            color: #d63384;
+            font-family: monospace;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .evaluations-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>
+                <i class="fas fa-flask"></i>
+                تقييمات مادة الفيزياء
+            </h1>
+            <h2>
+                <i class="fas fa-graduation-cap"></i>
+                الصف الثاني الثانوي - الفصل الدراسي الأول
+            </h2>
+        </div>
+
+        <!-- Evaluations Grid -->
+        <div class="evaluations-grid" id="evaluationsGrid">
+            <!-- سيتم إنشاء البطاقات بواسطة JavaScript -->
+        </div>
+
+        <!-- Instructions for developer -->
+        <div class="instructions">
+            <h3>
+                <i class="fas fa-code"></i>
+                تعليمات للمطور: أماكن رفع الملفات
+            </h3>
+            <ol>
+                <li><strong>لتفعيل أي تقييم:</strong> قم بتغيير كلاس الزر من <code>btn-coming-soon</code> إلى <code>btn-active</code></li>
+                <li><strong>لإضافة رابط التقييم:</strong> قم بإضافة الرابط في خاصية <code>onclick</code> أو استخدم <code>&lt;a&gt;</code> بداخل الزر</li>
+                <li><strong>مثال للرابط المباشر:</strong> <code>onclick="window.open('https://example.com/evaluation1.pdf', '_blank')"</code></li>
+                <li><strong>لرفع الملفات:</strong> يمكنك رفعها على أي خدمة استضافة (Google Drive, Dropbox, أو استضافة خاصة)</li>
+                <li><strong>مسار رفع الملفات المقترح:</strong> مجلد <code>/uploads/evaluations/</code> في استضافتك</li>
+            </ol>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <i class="fas fa-heart"></i>
+            جميع الحقوق محفوظة - وزارة التربية والتعليم
+            <i class="fas fa-heart"></i>
+        </div>
+    </div>
+
+    <script>
+        // قائمة التقييمات
+        const evaluations = [
+            { number: 1, title: "التقييم الأول", description: "تقييم الأسبوع الأول - الحركة الموجية" },
+            { number: 2, title: "التقييم الثاني", description: "تقييم الأسبوع الثاني - خصائص الموجات" },
+            { number: 3, title: "التقييم الثالث", description: "تقييم الأسبوع الثالث - انعكاس وانكسار الموجات" },
+            { number: 4, title: "التقييم الرابع", description: "تقييم الأسبوع الرابع - تداخل الموجات" },
+            { number: 5, title: "التقييم الخامس", description: "تقييم الأسبوع الخامس - الحيود" },
+            { number: 6, title: "التقييم السادس", description: "تقييم الأسبوع السادس - الصوت" },
+            { number: 7, title: "التقييم السابع", description: "تقييم الأسبوع السابع - خصائص الصوت" },
+            { number: 8, title: "التقييم الثامن", description: "تقييم الأسبوع الثامن - الضوء" },
+            { number: 9, title: "التقييم التاسع", description: "تقييم الأسبوع التاسع - انعكاس الضوء" },
+            { number: 10, title: "التقييم العاشر", description: "تقييم الأسبوع العاشر - انكسار الضوء" },
+            { number: 11, title: "التقييم الحادي عشر", description: "تقييم الأسبوع الحادي عشر - العدسات" },
+            { number: 12, title: "التقييم الثاني عشر", description: "تقييم الأسبوع الثاني عشر - مراجعة عامة" }
+        ];
+
+        // إنشاء بطاقات التقييمات
+        const grid = document.getElementById('evaluationsGrid');
+        
+        evaluations.forEach(eval => {
+            const card = document.createElement('div');
+            card.className = 'evaluation-card';
+            
+            card.innerHTML = `
+                <div class="card-number">${eval.number}</div>
+                <div class="card-title">${eval.title}</div>
+                <div class="card-subtitle">${eval.description}</div>
+                <button class="btn-coming-soon" disabled>
+                    <i class="fas fa-hourglass-half"></i>
+                    سيتوفر قريباً
+                </button>
+            `;
+            
+            grid.appendChild(card);
+        });
+
+        // شرح كيفية تفعيل الأزرار (للمطور)
+        console.log(`
+            ===================================
+            كيفية تفعيل أزرار التقييمات:
+            ===================================
+            1. قم بتغيير كلاس الزر من 'btn-coming-soon' إلى 'btn-active'
+            2. قم بإزالة خاصية disabled
+            3. أضف رابط التقييم في onclick أو استخدم عنصر <a>
+            
+            مثال للكود المفعل:
+            
+            <button class="btn-active" onclick="window.open('رابط_الملف', '_blank')">
+                <i class="fas fa-download"></i>
+                تحميل التقييم
+            </button>
+            
+            أو باستخدام رابط مباشر:
+            
+            <a href="رابط_الملف.pdf" class="btn-active" target="_blank">
+                <i class="fas fa-download"></i>
+                تحميل التقييم
+            </a>
+            
+            أماكن رفع الملفات المقترحة:
+            - مجلد /uploads/evaluations/ على السيرفر الخاص بك
+            - Google Drive (مع ضبط صلاحية الوصول للعامة)
+            - Dropbox
+            - أي خدمة استضافة ملفات
+            ===================================
+        `);
+    </script>
+</body>
+</html>
